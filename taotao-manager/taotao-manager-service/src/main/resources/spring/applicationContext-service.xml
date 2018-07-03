@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+      http://code.alibabatech.com/schema/dubbo
+      http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <context:component-scan base-package="com.taotao.service"/>
+
+    <!--=============================使用dubbo发布服务===================================-->
+    <!--提供方应用信息，用于计算依赖关系，name自定义，要有辨识度-->
+    <dubbo:application name="taotao-manager"/>
+    <!--连接到注册中心
+        address为系统的ip地址，视具体情况改动，zookeeper配置文件默认提供连接的端口为2181-->
+    <dubbo:registry protocol="zookeeper" address="192.168.37.128:2181"/>
+    <!--用dubbo协议在本机20880端口（默认，可自定义）暴露服务-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+    <!--声明需要暴露的服务接口，超时时间默认1秒，设置单位是毫秒-->
+    <dubbo:service interface="com.taotao.service.TestService" ref="testServiceImpl" timeout="300000"/>
+    <dubbo:service interface="com.taotao.service.ItemService" ref="itemServiceImpl" timeout="300000"/>
+
+
+</beans>
