@@ -39,6 +39,7 @@
         <activemq.version>5.15.4</activemq.version>
         <freemarker.version>2.3.28</freemarker.version>
         <quartz.version>2.3.0</quartz.version>
+        <fastdfs.version>1.27-SNAPSHOT</fastdfs.version>
     </properties>
 
     <!--dependencyManagement表示只定义依赖版本，而不是依赖-->
@@ -194,6 +195,12 @@
                 <groupId>commons-fileupload</groupId>
                 <artifactId>commons-fileupload</artifactId>
                 <version>${commons-fileupload.version}</version>
+            </dependency>
+            <!--FastDFS 图片上传，本地的依赖-->
+            <dependency>
+                <groupId>org.csource</groupId>
+                <artifactId>fastdfs-client-java</artifactId>
+                <version>${fastdfs.version}</version>
             </dependency>
             <!-- Redis客户端 -->
             <dependency>

@@ -113,12 +113,14 @@ var TT = TAOTAO = {
     			    title:'选择类目',
     			    onOpen : function(){
     			    	var _win = this;
+    			    	// easyUI的异步tree，根据访问url响应的内容初始化tree
     			    	$("ul",_win).tree({
     			    		url:'/item/cat/list',
     			    		animate:true,
     			    		onClick : function(node){
+    			    			//如果是叶子节点
     			    			if($(this).tree("isLeaf",node.target)){
-    			    				// 填写到cid中
+    			    				// 填写到父元素的cid中
     			    				_ele.parent().find("[name=cid]").val(node.id);
     			    				// 将文本值显示，并设置标签(上边追加的<span)的cid属性为节点的id
     			    				_ele.next().text(node.text).attr("cid",node.id);

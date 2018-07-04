@@ -23,6 +23,8 @@
     <!--声明需要暴露的服务接口，超时时间默认1秒，设置单位是毫秒-->
     <dubbo:service interface="com.taotao.service.TestService" ref="testServiceImpl" timeout="300000"/>
     <dubbo:service interface="com.taotao.service.ItemService" ref="itemServiceImpl" timeout="300000"/>
+    <dubbo:service interface="com.taotao.service.ItemCatService" ref="itemCatServiceImpl" timeout="300000"/>
+    <dubbo:service interface="com.taotao.service.PictureService" ref="pictureServiceImpl" timeout="300000"/>
 
 
 </beans>

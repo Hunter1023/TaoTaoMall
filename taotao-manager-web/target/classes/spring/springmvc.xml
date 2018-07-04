@@ -25,11 +25,24 @@
     </bean>
 
 
+    <!--多媒体文件解析器-->
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!--设定默认编码   -->
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!--限制文件上传的最大值 5MB-->
+        <property name="maxUploadSize" value="5242880"/>
+    </bean>
+
     <!--======================引用dubbo服务=========================-->
     <dubbo:application name="taotao-manager-web"/>
     <dubbo:registry protocol="zookeeper" address="192.168.37.128:2181"/>
-    <dubbo:reference interface="com.taotao.service.TestService" id="testService"/>
-    <dubbo:reference interface="com.taotao.service.ItemService" id="itemService"/>
+    <!--服务调用超时时间默认1秒，设置单位是毫秒-->
+    <dubbo:reference interface="com.taotao.service.TestService" id="testService" timeout="300000"/>
+    <dubbo:reference interface="com.taotao.service.ItemService" id="itemService" timeout="300000"/>
+    <dubbo:reference interface="com.taotao.service.ItemCatService" id="itemCatService" timeout="300000"/>
+    <dubbo:reference interface="com.taotao.service.PictureService" id="pictureService" timeout="300000"/>
+
 
     <!--能支持springMVC更高级一些的功能，映射动态请求，JSR303校验，快捷的AJAX请求，....-->
     <mvc:annotation-driven/>

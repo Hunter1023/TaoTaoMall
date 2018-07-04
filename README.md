@@ -13,6 +13,23 @@
 
 ## 前端显示EasyUI
 
+### datagrid
+
+### 异步tree
+树控件读取URL，**子节点的加载依赖于父节点的状态**。
+- 当展开一个封闭的节点，如果节点没有加载子节点，它将会把节点id的值作为http请求参数并命名为`id`，通过URL发送到服务器上检索子节点。
+- 响应结果是如下格式的json数据
+```
+[{
+	"id": 1,
+	"text": "Node 1",
+	"state": "closed"
+}
+...
+]
+```
+如果当前节点为父节点，state为`closed`；叶子节点则为`open`
+
 
 ## Dubbo管理服务层和表现层的通信
 
@@ -23,6 +40,10 @@ Linux中，放到tomcat的webapps目录下
 如果监控中心和注册中心在同一台服务器上，无需任何配置。如果不在同一台服务器，需要修改配置文件：
 `tomcat安装目录/webapps/dubbo-admin/WEB-INF/dubbo.properties`
 
+
+## Nginx做反向代理
+
+## FastDFS存储图片、文件
 
 
 

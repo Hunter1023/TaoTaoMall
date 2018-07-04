@@ -19,6 +19,11 @@
             <artifactId>taotao-manager-pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
+        <!--参数类型MultipartFile的依赖-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
