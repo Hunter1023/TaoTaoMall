@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a1ad0d8-b112-4671-8f9c-7e793776a7f6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/taotao-manager-web/src/main/webapp/WEB-INF/jsp/itemParam.jsp" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/src/main/java/com/taotao/controller/ItemController.java" afterPath="$PROJECT_DIR$/taotao-manager-web/src/main/java/com/taotao/controller/ItemController.java" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/src/main/java/com/taotao/controller/ItemParamController.java" afterPath="$PROJECT_DIR$/taotao-manager-web/src/main/java/com/taotao/controller/ItemParamController.java" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/src/main/webapp/WEB-INF/js/common.js" afterPath="$PROJECT_DIR$/taotao-manager-web/src/main/webapp/WEB-INF/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/src/main/webapp/WEB-INF/jsp/item-add.jsp" afterPath="$PROJECT_DIR$/taotao-manager-web/src/main/webapp/WEB-INF/jsp/item-add.jsp" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/target/classes/com/taotao/controller/ItemController.class" afterPath="$PROJECT_DIR$/taotao-manager-web/target/classes/com/taotao/controller/ItemController.class" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/target/tomcat/logs/access_log.2018-07-05" afterPath="$PROJECT_DIR$/taotao-manager-web/target/tomcat/logs/access_log.2018-07-05" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterPath="$PROJECT_DIR$/taotao-manager-web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/item_002dparam_002dlist_jsp.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager-web/target/tomcat/work/Tomcat/localhost/_/org/apache/jsp/WEB_002dINF/jsp/item_002dparam_002dlist_jsp.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager/taotao-manager-interface/src/main/java/com/taotao/service/ItemParamService.java" afterPath="$PROJECT_DIR$/taotao-manager/taotao-manager-interface/src/main/java/com/taotao/service/ItemParamService.java" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager/taotao-manager-interface/src/main/java/com/taotao/service/ItemService.java" afterPath="$PROJECT_DIR$/taotao-manager/taotao-manager-interface/src/main/java/com/taotao/service/ItemService.java" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager/taotao-manager-interface/target/classes/com/taotao/service/ItemService.class" afterPath="$PROJECT_DIR$/taotao-manager/taotao-manager-interface/target/classes/com/taotao/service/ItemService.class" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/src/main/java/com/taotao/service/impl/ItemParamServiceImpl.java" afterPath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/src/main/java/com/taotao/service/impl/ItemParamServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/src/main/java/com/taotao/service/impl/ItemServiceImpl.java" afterPath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/src/main/java/com/taotao/service/impl/ItemServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/target/classes/com/taotao/service/impl/ItemParamServiceImpl.class" afterPath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/target/classes/com/taotao/service/impl/ItemParamServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/target/classes/com/taotao/service/impl/ItemServiceImpl.class" afterPath="$PROJECT_DIR$/taotao-manager/taotao-manager-service/target/classes/com/taotao/service/impl/ItemServiceImpl.class" />
-    </list>
+    <list default="true" id="0a1ad0d8-b112-4671-8f9c-7e793776a7f6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/taotao-parent/target/" />
     <ignored path="$PROJECT_DIR$/taotao-common/target/" />
     <ignored path="$PROJECT_DIR$/taotao-manager/target/" />
@@ -73,7 +53,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
               <first_editor relative-caret-position="413">
-                <caret line="66" column="24" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="66" selection-end-column="24" />
+                <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="24" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -701,7 +681,7 @@
       <workItem from="1530694767814" duration="20380000" />
       <workItem from="1530721786713" duration="3138000" />
       <workItem from="1530726117284" duration="5300000" />
-      <workItem from="1530764269747" duration="31143000" />
+      <workItem from="1530764269747" duration="31199000" />
     </task>
     <servers />
   </component>
@@ -738,7 +718,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121651000" />
+    <option name="totallyTimeSpent" value="121707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1255,7 +1235,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="413">
-            <caret line="66" column="24" lean-forward="true" selection-start-line="64" selection-start-column="3" selection-end-line="66" selection-end-column="24" />
+            <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="24" />
             <folding />
           </first_editor>
           <second_editor />
