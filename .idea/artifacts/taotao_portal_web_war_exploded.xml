@@ -1,0 +1,46 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="taotao-portal-web:war exploded">
+    <output-path>$PROJECT_DIR$/taotao-portal-web/target/taotao-portal-web</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="taotao-portal-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.13" />
+          <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: com.github.pagehelper:pagehelper:5.1.4" />
+          <element id="library" level="project" name="Maven: com.github.jsqlparser:jsqlparser:1.0" />
+          <element id="library" level="project" name="Maven: com.alibaba:dubbo:2.6.2" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.12" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.25" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
+          <element id="library" level="project" name="Maven: jline:jline:0.9.94" />
+          <element id="library" level="project" name="Maven: org.apache.yetus:audience-annotations:0.5.0" />
+          <element id="library" level="project" name="Maven: io.netty:netty:3.10.6.Final" />
+          <element id="library" level="project" name="Maven: com.github.sgroschupf:zkclient:0.1" />
+          <element id="library" level="project" name="Maven: org.apache.curator:curator-framework:4.0.1" />
+          <element id="library" level="project" name="Maven: org.apache.curator:curator-client:4.0.1" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:20.0" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/taotao-portal-web/target/taotao-portal-web/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="taotao-portal-web/web/Web" />
+    </root>
+  </artifact>
+</component>

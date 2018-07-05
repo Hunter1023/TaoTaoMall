@@ -1,0 +1,55 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app  xmlns="http://java.sun.com/xml/ns/javaee"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-app.xsd" version="3.0">
+  <display-name>taotao-portal-web</display-name>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+  <!--==================springmvc的前端控制器，拦截所有请求========================-->
+  <servlet>
+    <servlet-name>taotao-portal-web</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:/spring/springmvc.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>taotao-portal-web</servlet-name>
+    <!--SEO：搜索引擎优化，伪静态化，不拦截静态资源-->
+    <url-pattern>*.html</url-pattern>
+  </servlet-mapping>
+
+  <!--===========字符编码过滤器(多个过滤器有先后顺序，字符编码必须在所有过滤器之前)============-->
+  <filter>
+    <filter-name>CharacterEncoding</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>UTF-8</param-value>
+    </init-param>
+    <!--springweb 4.0版本之后多了如下两个属性，强制让请求和响应编码为UTF-8-->
+    <init-param>
+      <param-name>forceRequestEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>forceResponseEncoding</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncoding</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+</web-app>
