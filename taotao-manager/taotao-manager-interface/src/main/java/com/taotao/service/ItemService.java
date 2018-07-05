@@ -9,21 +9,16 @@ import com.taotao.pojo.TbItem;
  */
 public interface ItemService {
 
-    /**
-     * 分页查询
-     */
+    //分页查询
     EasyUIDataGridResult getItemList(Integer page, Integer rows);
 
-    /**
-     * 单个商品查询
-     * @param itemId
-     * @return
-     */
+    // 单个商品查询
     TbItem getItemById(Long itemId);
 
-    /**
-     * 新建商品
-     */
-    TaotaoResult createItem(TbItem item, String desc);
+    //新建商品
+    TaotaoResult createItem(TbItem item, String desc, String itemParam);
+
+    //查询商品规格参数
+    String getItemParamHtml(Long itemId);
 
 }

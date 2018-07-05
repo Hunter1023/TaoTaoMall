@@ -127,7 +127,7 @@ var TT = TAOTAO = {
     			    				
     			    				$(_win).window('close');
     			    				if(data && data.fun){
-    			    					// 阻止浏览器自身的弹窗
+    			    					// 注释掉浏览器弹窗提示
     			    					// alert(data);
     			    					data.fun.call(this,node);
     			    				}
@@ -185,13 +185,17 @@ var TT = TAOTAO = {
     closeCurrentWindow : function(){
     	$(".panel-tool-close").click();
     },
-    
+
+	//展示规格参数表单
     changeItemParam : function(node,formId){
+    	//查询规格参数模板
     	$.getJSON("/item/param/query/itemcatid/" + node.id,function(data){
 			  if(data.status == 200 && data.data){
 				 $("#"+formId+" .params").show();
+				 // JSON.parse 把字符串对象转换成js对象；和JSON.stringify 作用相反
 				 var paramData = JSON.parse(data.data.paramData);
 				 var html = "<ul>";
+				 //动态生成表单
 				 for(var i in paramData){
 					 var pd = paramData[i];
 					 html+="<li><table>";

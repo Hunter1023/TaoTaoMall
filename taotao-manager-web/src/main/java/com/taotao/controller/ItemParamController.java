@@ -15,7 +15,7 @@ public class ItemParamController {
     @Resource
     private ItemParamService paramService;
 
-    //获取规格参数列表
+    //获取规格参数模板列表
     @RequestMapping("/list")
     @ResponseBody
     public EasyUIDataGridResult getItemParamList(
@@ -25,7 +25,7 @@ public class ItemParamController {
         return paramService.getItemParamList(page, rows);
     }
 
-    //查询查询某个类目的规格参数
+    //查询某个类目的规格参数模板
     @RequestMapping("/query/itemcatid/{cid}")
     @ResponseBody
     public TaotaoResult getItemParamByCid(@PathVariable Long cid) {
@@ -33,7 +33,7 @@ public class ItemParamController {
         return paramService.getItemParamByCid(cid);
     }
 
-    //添加某个类目的规格参数
+    //添加某个类目的规格参数模板
     @RequestMapping(value = "/save/{cid}", method = RequestMethod.POST)
     @ResponseBody
     public TaotaoResult insertItemParam(@PathVariable Long cid,
@@ -41,7 +41,7 @@ public class ItemParamController {
         return paramService.insertItemParam(cid, paramData);
     }
 
-    //删除规格参数(可批量)
+    //删除规格参数模板(可批量)
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     @ResponseBody
     public TaotaoResult deleteItemParams(@RequestParam String ids){

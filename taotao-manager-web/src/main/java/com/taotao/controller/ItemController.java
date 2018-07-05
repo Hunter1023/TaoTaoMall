@@ -10,6 +10,7 @@ import com.taotao.service.ItemService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -32,6 +33,24 @@ public class ItemController {
 
 
         return itemService.getItemList(page, rows);
+    }
+
+    //查询单个商品
+    @RequestMapping("/item/{itemId}")
+    @ResponseBody
+    public TbItem getItemById(@PathVariable Long itemId) {
+       TbItem item = itemService.getItemById(itemId);
+        return item;
+    }
+
+
+    //展示商品参数规格
+    @RequestMapping("/page/item/{itemId}")
+    public String showItemParam(@PathVariable Long itemId,
+                                Model model) {
+        String html = itemService.getItemParamHtml(itemId);
+        model.addAttribute("myhtml", html);
+        return "itemParam";
     }
 
     //上传图片,dubbo不能传输MultipartFile，于是在Controller中进行上传；
@@ -79,8 +98,8 @@ public class ItemController {
      */
     @RequestMapping(value = "/item/save", method = RequestMethod.POST)
     @ResponseBody
-    public TaotaoResult saveItem(TbItem item, String desc) {
-        return itemService.createItem(item, desc);
+    public TaotaoResult saveItem(TbItem item, String desc, String itemParam) {
+        return itemService.createItem(item, desc, itemParam);
     }
 
 }
