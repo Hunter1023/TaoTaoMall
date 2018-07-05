@@ -55,7 +55,12 @@ Linux中，放到tomcat的webapps目录下
 - [文件上传](https://blog.csdn.net/qq315737546/article/details/52792037)
 - [dubbo上传文件](https://www.jianshu.com/p/b0841d6fa830)
 
+## 规格参数模板
 
+### 规格参数列表
+- 从`tb_item_param`中查询数据展示到jsp，单表查询，实现分页
+
+### 实现规格参数模板的添加和删除
 
 	
 

@@ -127,7 +127,8 @@ var TT = TAOTAO = {
     			    				
     			    				$(_win).window('close');
     			    				if(data && data.fun){
-    			    					alert(data);
+    			    					// 阻止浏览器自身的弹窗
+    			    					// alert(data);
     			    					data.fun.call(this,node);
     			    				}
     			    			}
