@@ -374,7 +374,7 @@
 	}
 	
 	/**
-	 * update tab panel, param has following properties:
+	 * update tab panel, param has following resource:
 	 * tab: the tab panel to be updated
 	 * options: the tab panel options
 	 * type: the update type, possible values are: 'header','body','all'

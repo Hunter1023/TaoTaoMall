@@ -456,8 +456,8 @@ jQuery.extend({
 			return false;
 		}
 
-		// Own properties are enumerated firstly, so to speed up,
-		// if last one is own, then all properties are own.
+		// Own resource are enumerated firstly, so to speed up,
+		// if last one is own, then all resource are own.
 
 		var key;
 		for ( key in obj ) {}
@@ -1522,7 +1522,7 @@ jQuery.extend({
 	expando: "jQuery" + ( jQuery.fn.jquery + Math.random() ).replace( /\D/g, "" ),
 
 	// The following elements throw uncatchable exceptions if you
-	// attempt to add expando properties to them.
+	// attempt to add expando resource to them.
 	noData: {
 		"embed": true,
 		// Ban all objects except for Flash (which handle expandos)
@@ -2417,7 +2417,7 @@ jQuery.extend({
 		var ret, hooks, notxml,
 			nType = elem.nodeType;
 
-		// don't get/set properties on text, comment and attribute nodes
+		// don't get/set resource on text, comment and attribute nodes
 		if ( !elem || nType === 3 || nType === 8 || nType === 2 ) {
 			return;
 		}
@@ -2468,7 +2468,7 @@ jQuery.extend({
 // Hook for boolean attributes
 boolHook = {
 	get: function( elem, name ) {
-		// Align boolean attributes with corresponding properties
+		// Align boolean attributes with corresponding resource
 		// Fall back to attribute presence where some booleans are not supported
 		var attrNode,
 			property = jQuery.prop( elem, name );
@@ -3132,7 +3132,7 @@ jQuery.event = {
 			return event;
 		}
 
-		// Create a writable copy of the event object and normalize some properties
+		// Create a writable copy of the event object and normalize some resource
 		var i, prop,
 			originalEvent = event,
 			fixHook = jQuery.event.fixHooks[ event.type ] || {},
@@ -3259,7 +3259,7 @@ jQuery.Event = function( src, props ) {
 		this.type = src;
 	}
 
-	// Put explicitly provided properties onto the event object
+	// Put explicitly provided resource onto the event object
 	if ( props ) {
 		jQuery.extend( this, props );
 	}
@@ -3720,7 +3720,7 @@ var cachedruns,
 				delete cache[ keys.shift() ];
 			}
 
-			// Retrieve with (key + " ") to avoid collision with native Object.prototype properties (see Issue #157)
+			// Retrieve with (key + " ") to avoid collision with native Object.prototype resource (see Issue #157)
 			return (cache[ key + " " ] = value);
 		}, cache );
 	},
@@ -6452,7 +6452,7 @@ jQuery.extend({
 
 						delete cache[ id ];
 
-						// IE does not allow us to delete expando properties from nodes,
+						// IE does not allow us to delete expando resource from nodes,
 						// nor does it have a removeAttribute function on Document nodes;
 						// we must handle all of these cases
 						if ( deleteExpando ) {
@@ -6683,7 +6683,7 @@ jQuery.extend({
 		}
 	},
 
-	// Exclude the following css properties to add px
+	// Exclude the following css resource to add px
 	cssNumber: {
 		"fillOpacity": true,
 		"fontWeight": true,
@@ -6695,7 +6695,7 @@ jQuery.extend({
 		"zoom": true
 	},
 
-	// Add in properties whose names you wish to fix before
+	// Add in resource whose names you wish to fix before
 	// setting or getting the value
 	cssProps: {
 		// normalize float css property
@@ -6736,7 +6736,7 @@ jQuery.extend({
 				return;
 			}
 
-			// If a number was passed in, add 'px' to the (except for certain CSS properties)
+			// If a number was passed in, add 'px' to the (except for certain CSS resource)
 			if ( type === "number" && !jQuery.cssNumber[ origName ] ) {
 				value += "px";
 			}
@@ -6795,7 +6795,7 @@ jQuery.extend({
 		return val;
 	},
 
-	// A method for quickly swapping in/out CSS properties to get correct calculations
+	// A method for quickly swapping in/out CSS resource to get correct calculations
 	swap: function( elem, options, callback ) {
 		var ret, name,
 			old = {};
@@ -6908,7 +6908,7 @@ function augmentWidthOrHeight( elem, name, extra, isBorderBox ) {
 	var i = extra === ( isBorderBox ? "border" : "content" ) ?
 		// If we already have the right measurement, avoid augmentation
 		4 :
-		// Otherwise initialize for horizontal or vertical properties
+		// Otherwise initialize for horizontal or vertical resource
 		name === "width" ? 1 : 0,
 
 		val = 0;
@@ -7148,7 +7148,7 @@ if ( jQuery.expr && jQuery.expr.filters ) {
 	};
 }
 
-// These hooks are used by animate to expand properties
+// These hooks are used by animate to expand resource
 jQuery.each({
 	margin: "",
 	padding: "",
@@ -8368,7 +8368,7 @@ jQuery.ajaxSettings.xhr = window.ActiveXObject ?
 	// For all other browsers, use the standard XMLHttpRequest object
 	createStandardXHR;
 
-// Determine support properties
+// Determine support resource
 (function( xhr ) {
 	jQuery.extend( jQuery.support, {
 		ajax: !!xhr,
@@ -8442,7 +8442,7 @@ if ( jQuery.support.ajax ) {
 							responses,
 							xml;
 
-						// Firefox throws exceptions when accessing properties
+						// Firefox throws exceptions when accessing resource
 						// of an xhr when a network error occurred
 						// http://helpful.knobs-dials.com/index.php/Component_returned_failure_code:_0x80040111_(NS_ERROR_NOT_AVAILABLE)
 						try {
@@ -8983,7 +8983,7 @@ Tween.propHooks = {
 		},
 		set: function( tween ) {
 			// use step hook for back compat - use cssHook if its there - use .style if its
-			// available and use plain properties where available
+			// available and use plain resource where available
 			if ( jQuery.fx.step[ tween.prop ] ) {
 				jQuery.fx.step[ tween.prop ]( tween );
 			} else if ( tween.elem.style && ( tween.elem.style[ jQuery.cssProps[ tween.prop ] ] != null || jQuery.cssHooks[ tween.prop ] ) ) {

@@ -45,6 +45,15 @@ Linux中，放到tomcat的webapps目录下
 
 ## FastDFS存储图片、文件
 
+## KindEditor替换为最新的版本，不然网页的图片上传按钮无法显示
+
+
+## dubbo不支持 file,inputStream 这种文件、流的传输
+- 直接在Controller中处理
+- 改用hessian协议进行传输
+参考：
+- [文件上传](https://blog.csdn.net/qq315737546/article/details/52792037)
+- [dubbo上传文件](https://www.jianshu.com/p/b0841d6fa830)
 
 
 

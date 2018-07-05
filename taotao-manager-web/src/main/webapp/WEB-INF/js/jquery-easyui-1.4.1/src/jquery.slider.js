@@ -111,7 +111,7 @@
 	}
 	
 	/**
-	 * build the slider and set some properties
+	 * build the slider and set some resource
 	 */
 	function buildSlider(target){
 		var state = $.data(target, 'slider');

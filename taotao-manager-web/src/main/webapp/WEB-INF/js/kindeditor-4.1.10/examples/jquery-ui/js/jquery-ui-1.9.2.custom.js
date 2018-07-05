@@ -395,7 +395,7 @@ $.widget = function( name, base, prototype ) {
 			this._createWidget( options, element );
 		}
 	};
-	// extend with the existing constructor to carry over any static properties
+	// extend with the existing constructor to carry over any static resource
 	$.extend( constructor, existingConstructor, {
 		version: prototype.version,
 		// copy the object used to create the prototype in case we need to
@@ -806,7 +806,7 @@ $.Widget.prototype = {
 		// so we need to reset the target on the new event
 		event.target = this.element[ 0 ];
 
-		// copy original event properties over to the new event
+		// copy original event resource over to the new event
 		orig = event.originalEvent;
 		if ( orig ) {
 			for ( prop in orig ) {
@@ -6440,7 +6440,7 @@ $.ui.plugin.add("draggable", "connectToSortable", {
 
 				this.instance.options.helper = this.instance.options._helper;
 
-				//If the helper has been the original item, restore properties in the sortable
+				//If the helper has been the original item, restore resource in the sortable
 				if(inst.options.helper == 'original')
 					this.instance.currentItem.css({ top: 'auto', left: 'auto' });
 
@@ -7155,7 +7155,7 @@ $.effects = {
 supportElem.style.cssText = "background-color:rgba(1,1,1,.5)";
 support.rgba = supportElem.style.backgroundColor.indexOf( "rgba" ) > -1;
 
-// define cache name and alpha properties
+// define cache name and alpha resource
 // for rgba and hsla spaces
 each( spaces, function( spaceName, space ) {
 	space.cache = "_" + spaceName;
@@ -7287,7 +7287,7 @@ color.fn = jQuery.extend( color.prototype, {
 							inst[ cache ] = space.to( inst._rgba );
 						}
 
-						// this is the only case where we allow nulls for ALL properties.
+						// this is the only case where we allow nulls for ALL resource.
 						// call clamp with alwaysAllowEmpty
 						inst[ cache ][ prop.idx ] = clamp( red[ key ], prop, true );
 					});
@@ -7809,7 +7809,7 @@ $.effects.animateClass = function( value, duration, easing, callback ) {
 			applyClassChange();
 
 			// for each animated element,
-			// clear all css properties that were animated
+			// clear all css resource that were animated
 			$.each( arguments, function() {
 				var el = this.el;
 				$.each( this.diff, function(key) {
@@ -7878,7 +7878,7 @@ $.fn.extend({
 $.extend( $.effects, {
 	version: "1.9.2",
 
-	// Saves a set of properties in a data storage
+	// Saves a set of resource in a data storage
 	save: function( element, set ) {
 		for( var i=0; i < set.length; i++ ) {
 			if ( set[ i ] !== null ) {
@@ -7887,7 +7887,7 @@ $.extend( $.effects, {
 		}
 	},
 
-	// Restores a set of previously saved properties from a data storage
+	// Restores a set of previously saved resource from a data storage
 	restore: function( element, set ) {
 		var val, i;
 		for( i=0; i < set.length; i++ ) {
@@ -7935,7 +7935,7 @@ $.extend( $.effects, {
 		};
 	},
 
-	// Wraps the element around a wrapper that copies position properties
+	// Wraps the element around a wrapper that copies position resource
 	createWrapper: function( element ) {
 
 		// if the element is already wrapped, return it
@@ -7983,7 +7983,7 @@ $.extend( $.effects, {
 
 		wrapper = element.parent(); //Hotfix for jQuery 1.4 since some change in wrap() seems to actually lose the reference to the wrapped element
 
-		// transfer positioning properties to the wrapper
+		// transfer positioning resource to the wrapper
 		if ( element.css( "position" ) === "static" ) {
 			wrapper.css({ position: "relative" });
 			element.css({ position: "relative" });
@@ -8293,7 +8293,7 @@ $.effects.effect.blind = function( o, done ) {
 		show = mode === "show",
 		wrapper, distance, margin;
 
-	// if already wrapped, the wrapper's properties are my property. #6245
+	// if already wrapped, the wrapper's resource are my property. #6245
 	if ( el.parent().is( ".ui-effects-wrapper" ) ) {
 		$.effects.save( el.parent(), props );
 	} else {

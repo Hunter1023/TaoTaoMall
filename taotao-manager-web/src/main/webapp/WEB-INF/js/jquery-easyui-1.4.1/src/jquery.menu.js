@@ -244,7 +244,7 @@
 	}
 	
 	/**
-	 * show the menu, the 'param' object has one or more properties:
+	 * show the menu, the 'param' object has one or more resource:
 	 * left: the left position to display
 	 * top: the top position to display
 	 * menu: the menu to display, if not defined, the 'target menu' is used
@@ -554,7 +554,7 @@
 			return findItem(jq[0], text);
 		},
 		/**
-		 * append menu item, the param contains following properties:
+		 * append menu item, the param contains following resource:
 		 * parent,id,text,iconCls,href,onclick
 		 * when parent property is assigned, append menu item to it
 		 */

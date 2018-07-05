@@ -7,7 +7,7 @@ Version 1.4.1
  * form: The filebox components in the form do not work correctly after calling 'clear' method. fixed.
 * Improvement
  * tabs: The 'update' method accepts 'type' option that allows the user to update the header,body,or both.
- * panel: Add 'openAnimation','openDuration','closeAnimation' and 'closeDuration' properties to set the animation for opening or closing a panel.
+ * panel: Add 'openAnimation','openDuration','closeAnimation' and 'closeDuration' resource to set the animation for opening or closing a panel.
  * panel: Add 'footer' property that allows the user to add a footer bar to the bottom of panel.
  * datagrid: Calling 'endEdit' method will accept the editing value correctly.
  * datagrid: Add 'onBeforeSelect','onBeforeCheck','onBeforeUnselect','onBeforeUncheck' events.
@@ -27,7 +27,7 @@ Version 1.4
  * menu: Add 'duration' property that allows the user to define duration time in milliseconds to hide menu.
  * validatebox: Add 'onBeforeValidate' and 'onValidate' events.
  * combo: Extended from textbox now.
- * combo: Add 'panelMinWidth','panelMaxWidth','panelMinHeight' and 'panelMaxHeight' properties.
+ * combo: Add 'panelMinWidth','panelMaxWidth','panelMinHeight' and 'panelMaxHeight' resource.
  * searchbox: Extended from textbox now.
  * tree: The 'getRoot' method will return the top parent node of a specified node if pass a 'nodeEl' parameter.
  * tree: Add 'queryParams' property.
@@ -35,7 +35,7 @@ Version 1.4
  * panel: Add 'doLayout' method to cause the panel to lay out its components.
  * panel: Add 'clear' method to clear the panel's content.
  * datagrid: The user is allowed to assign percent width to columns.
- * form: Add 'ajax','novalidate' and 'queryParams' properties.
+ * form: Add 'ajax','novalidate' and 'queryParams' resource.
  * linkbutton: Add 'resize' method.
 * New Plugins
  * textbox: A enhanced input field that allows users build their form easily.
@@ -88,7 +88,7 @@ Version 1.3.5
  * tree: Improve loading performance.
  * pagination: The 'layout' property can be used to customize the pagination layout.
  * accordion: Add 'unselect' method that will trigger 'onUnselect' event.
- * accordion: Add 'selected' and 'multiple' properties.
+ * accordion: Add 'selected' and 'multiple' resource.
  * accordion: Add 'getSelections' method.
  * datebox: Add 'sharedCalendar' property that allows multiple datebox components share one calendar component.
 
@@ -106,7 +106,7 @@ Version 1.3.4
  * datagrid: The 'multiSort' property is added to support multiple column sorting.
  * datagrid: The 'rowStyler' and column 'styler' can return CSS class name or inline styles.
  * treegrid: Add 'load' method to load data and navigate to the first page.
- * tabs: Add 'tabWidth' and 'tabHeight' properties.
+ * tabs: Add 'tabWidth' and 'tabHeight' resource.
  * validatebox: The 'novalidate' property is available to indicate whether to perform the validation.
  * validatebox: Add 'enableValidation' and 'disableValidation' methods.
  * form: Add 'enableValidation' and 'disableValidation' methods.
@@ -130,7 +130,7 @@ Version 1.3.3
  * validatebox: Dependent on tooltip plugin now, add 'deltaX' property.
  * numberbox: The 'filter' options can be used to determine if the key pressed was accepted.
  * linkbutton: The group button is available.
- * layout: The 'minWidth','maxWidth','minHeight','maxHeight' and 'collapsible' properties are available for region panel.
+ * layout: The 'minWidth','maxWidth','minHeight','maxHeight' and 'collapsible' resource are available for region panel.
 * New Plugins
  * tooltip: Display a popup message when moving mouse over an element.
  
@@ -198,7 +198,7 @@ Version 1.3
  * datagrid: Calling 'mergeCells' method can't auto resize the merged cell while header is hidden. fixed.
  * dialog: Set cache to false and load data via ajax, the content cannot be refreshed. fixed.
 * Improvement
- * The HTML5 'data-options' attribute is available for components to declare all custom options, including properties and events.
+ * The HTML5 'data-options' attribute is available for components to declare all custom options, including resource and events.
  * More detailed documentation is available.
  * panel: Prevent script on panel body from running twice.
  * accordion: Add 'getPanelIndex' method.
@@ -209,7 +209,7 @@ Version 1.3
  * datagrid: Double click on the right border of columns to auto resize the columns to the contents in the columns.
  * datagrid: Add 'autoSizeColumn' method that allows users to adjust the column width to fit the contents.
  * datagrid: Add 'getChecked' method to get all rows where the checkbox has been checked.
- * datagrid: Add 'selectOnCheck' and 'checkOnSelect' properties and some checking methods to enhance the row selections.
+ * datagrid: Add 'selectOnCheck' and 'checkOnSelect' resource and some checking methods to enhance the row selections.
  * datagrid: Add 'pagePosition' property to allow users to display pager bar at either top,bottom or both places of the grid.
  * datagrid: The buffer view and virtual scroll view are supported to display large amounts of records without pagination.
  * tabs: Add 'disableTab' and 'enableTab' methods to allow users to disable or enable a tab panel.
@@ -332,11 +332,11 @@ Version 1.2.1
 Version 1.2
 -------------
 * Improvement
- * tree: Add cascadeCheck,onlyLeafCheck properties and select event.
+ * tree: Add cascadeCheck,onlyLeafCheck resource and select event.
  * combobox: Enable multiple selection.
  * combotree: Enable multiple selection.
  * tabs: Remember the trace of selection, when current tab panel is closed, the previous selected tab will be selected.
- * datagrid: Extend from panel, so many properties defined in panel can be used for datagrid.
+ * datagrid: Extend from panel, so many resource defined in panel can be used for datagrid.
 * New Plugins
  * treegrid: Represent tabular data in hierarchical view, combines tree view and datagrid.
  * combo: The basic component that allow user to extend their combo component such as combobox,combotree,etc.

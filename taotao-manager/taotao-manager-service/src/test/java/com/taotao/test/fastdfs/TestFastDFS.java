@@ -9,7 +9,7 @@ public class TestFastDFS {
     @Test
     public void testUpload() throws Exception {
         //初始化全局配置，加载一个配置文件
-        ClientGlobal.init("C:\\Users\\Hunter\\Desktop\\taotao\\taotao-manager-web\\src\\main\\resources\\properties\\fastdfs-client.conf");
+        ClientGlobal.init("C:\\Users\\Hunter\\Desktop\\taotao\\taotao-manager\\taotao-manager-service\\src\\main\\resources\\resource\\fastdfs-client.conf");
 
         // 创建一个TrackerClient对象
         TrackerClient trackerClient = new TrackerClient();
@@ -30,7 +30,7 @@ public class TestFastDFS {
 
     @Test
     public void testFastDFSClient() throws Exception {
-        FastDFSClient client = new FastDFSClient("C:\\Users\\Hunter\\Desktop\\taotao\\taotao-manager-web\\src\\main\\resources\\properties\\fastdfs-client.conf");
+        FastDFSClient client = new FastDFSClient("C:\\Users\\Hunter\\Desktop\\taotao\\taotao-manager\\taotao-manager-service\\src\\main\\resources\\resource\\fastdfs-client.conf");
         String uploadFile = client.uploadFile("C:\\Users\\Hunter\\Desktop\\-4f764652eafc7f8b.png",
                 "png");
 

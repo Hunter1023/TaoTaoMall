@@ -16,6 +16,8 @@
 
     <context:component-scan base-package="com.taotao.controller"/>
 
+    <!--加载配置文件，图片上传相关-->
+    <context:property-placeholder location="classpath:resource/*.properties"/>
 
     <!--=======================配置视图解析器，方便页面返回==================================-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -41,7 +43,6 @@
     <dubbo:reference interface="com.taotao.service.TestService" id="testService" timeout="300000"/>
     <dubbo:reference interface="com.taotao.service.ItemService" id="itemService" timeout="300000"/>
     <dubbo:reference interface="com.taotao.service.ItemCatService" id="itemCatService" timeout="300000"/>
-    <dubbo:reference interface="com.taotao.service.PictureService" id="pictureService" timeout="300000"/>
 
 
     <!--能支持springMVC更高级一些的功能，映射动态请求，JSR303校验，快捷的AJAX请求，....-->
@@ -53,6 +54,7 @@
     <!--相对于<mvc:default-servlet-handler/>有针对性，更灵活-->
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
     <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
+
 
 
 </beans>
