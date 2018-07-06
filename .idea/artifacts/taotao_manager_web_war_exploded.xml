@@ -31,6 +31,9 @@
           <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.11" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP-java6:2.3.13" />
           <element id="library" level="project" name="Maven: org.csource:fastdfs-client-java:1.27-SNAPSHOT" />
+          <element id="archive" name="taotao-content-interface-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="taotao-content-interface" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.0.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.0.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.0.6.RELEASE" />

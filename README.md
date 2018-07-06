@@ -76,5 +76,18 @@ Linux中，放到tomcat的webapps目录下
         - 改版工作量大，可维护性差
         
 **使用内容管理系统解决上述问题**。
+
+
+### 新增内容分类，需要返回主键id（自增），在mapper的xml文件中，insert的方法中添加如下
+order="AFTER" ：插入之后
+
+```xml
+<insert id="insert" parameterType="com.taotao.pojo.TbContentCategory">
+    <selectKey keyProperty="id" order="AFTER" resultType="long">
+        SELECT LAST_INSERT_ID()
+    </selectKey>
+    ...
+</insert>
+```
 	
 
