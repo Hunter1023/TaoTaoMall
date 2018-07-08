@@ -45,6 +45,8 @@
     <dubbo:reference interface="com.taotao.service.ItemCatService" id="itemCatService" timeout="300000"/>
     <dubbo:reference interface="com.taotao.service.ItemParamService" id="itemParamService" timeout="300000"/>
     <dubbo:reference interface="com.taotao.content.service.ContentCategoryService" id="contentCategoryService" timeout="300000"/>
+    <dubbo:reference interface="com.taotao.content.service.ContentService" id="contentService" timeout="300000"/>
+
 
     <!--能支持springMVC更高级一些的功能，映射动态请求，JSR303校验，快捷的AJAX请求，....-->
     <mvc:annotation-driven/>

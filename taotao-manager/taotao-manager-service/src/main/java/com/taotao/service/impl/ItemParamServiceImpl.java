@@ -73,8 +73,7 @@ public class ItemParamServiceImpl implements ItemParamService {
     public TaotaoResult deleteItemParam(String ids) {
         String[] idList = ids.split(",");
 
-        for (String idString :
-                idList) {
+        for (String idString : idList) {
             Long id = Long.parseLong(idString);
             itemParamMapper.deleteByPrimaryKey(id);
         }

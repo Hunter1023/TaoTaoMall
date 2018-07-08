@@ -25,13 +25,17 @@
     </div>
 </div>
 <script type="text/javascript">
+	//文档加载时，处理以下逻辑
 $(function(){
 	var tree = $("#contentCategoryTree");
 	var datagrid = $("#contentList");
 	tree.tree({
 		onClick : function(node){
+		    //如果点击的节点是叶子节点
 			if(tree.tree("isLeaf",node.target)){
-				datagrid.datagrid('reload', {
+				//重新发送URI请求，加载表格中的数据
+			    datagrid.datagrid('reload', {
+			        //发送请求的参数 分类的Id
 					categoryId :node.id
 		        });
 			}
@@ -42,12 +46,15 @@ var contentListToolbar = [{
     text:'新增',
     iconCls:'icon-add',
     handler:function(){
+        //获取树中被选择的节点
     	var node = $("#contentCategoryTree").tree("getSelected");
+		//如果没有选择子节点
     	if(!node || !$("#contentCategoryTree").tree("isLeaf",node.target)){
     		$.messager.alert('提示','新增内容必须选择一个内容分类!');
     		return ;
     	}
     	TT.createWindow({
+			//动态发送url，获取jsp页面，展示在窗口中
 			url : "/content-add"
 		}); 
     }
